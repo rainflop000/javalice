@@ -4,7 +4,7 @@ import java.util.*;
 * Class represents an exit in the game. Contains methods to update exit chance.
 * and check if exit is available based on the probability contained in
 * exits.txt read in the Game class.
-* @author William Rosenboom
+* @author rainflop000
 * @version 1.0
 */
 public class Exit
