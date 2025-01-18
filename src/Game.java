@@ -4,7 +4,7 @@ import java.io.*;
 /**
 * Main class of the program. Contains methods to read exits.txt and simulate a
 * series of rounds for a player to navigate, choosing rooms/portals to find exit while
-* avoiding magical police. Writes outcome of game to Outcome.txt.
+* avoiding magical police. Prints outcome of game to screen.
 * @author rainflop000
 * @version 1.0
 */
@@ -75,7 +75,7 @@ public class Game
 
     /**
     * Handles what happens when portals are available. Allows player to choose an
-    * available portal direction and ends game by writing to Outcome.txt if
+    * available portal direction and ends game by printing to screen if
     * player finds an exit.
     * @param player The object of the Player class
     * @param portals The object of the Room class
@@ -90,19 +90,8 @@ public class Game
         policeEncounter = police.checkForPoliceEncounter(selectedIndex);
         if (foundExit)
         {
-            try
-            {
-                PrintWriter writer = new PrintWriter(new File("Outcome.txt"));
-                player.setGameWon(true);
-                System.out.println("Game concluded! See 'Outcome.txt' file for result.");
-                String outcome = "Congratulations! You found an exit and escaped Javalice!";
-                writer.println(outcome);
-                writer.close();
-            }
-            catch (IOException e)
-            {
-                System.out.println("Error in writing to file! Exiting...");
-            } 
+            player.setGameWon(true);
+            displayOutcome("Congratulations! You found an exit and escaped Javalice!");
         }
         else
         {
@@ -303,27 +292,24 @@ public class Game
         return false;
     }
 
+/**
+* Utility method to display the game outcome.
+* @param message The outcome message to be displayed.
+*/
+public void displayOutcome(String message) {
+    System.out.println(message);
+}
+
     /**
-    * Ends game and writes to Outcome.txt if player caught or out of jumps.
+    * Ends game and prints message to screen if player caught or out of jumps.
     * @param player The object of the Player class
     */
     public void lostGame(Player player)
     {
-        try
-        {
-            PrintWriter writer = new PrintWriter(new File("Outcome.txt"));
-            player.setGameEnd(true);
-            System.out.println("You have no more jumps remaining!");
-            System.out.println("Game concluded. See Outcome.txt file for result.");
-            String outcome = "You have no more jumps remaining. Game over.";
-            writer.println(outcome);
-            writer.close();
-        }
-        catch (IOException e)
-        {
-            System.out.println("Error in writing to file! Exiting...");
-        }
+        player.setGameEnd(true);
+        displayOutcome("You were caught by the police and have no moves remaining! Game over - you lose.");
     }
+
     /**
     * Main method for the program. Initialises the game, reads exits.txt, creates
     * the necessary objects from other classes, and begins the game.
