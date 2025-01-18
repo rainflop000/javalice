@@ -5,7 +5,7 @@ import java.io.*;
 * Main class of the program. Contains methods to read exits.txt and simulate a
 * series of rounds for a player to navigate, choosing rooms/portals to find exit while
 * avoiding magical police. Writes outcome of game to Outcome.txt.
-* @author William Rosenboom
+* @author rainflop000
 * @version 1.0
 */
 public class Game

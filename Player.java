@@ -3,7 +3,7 @@ import java.util.*;
 /**
 * Class represents a player in the game. Contains methods to obtain player name,
 * display game instructions and use/display jumps.
-* @author William Rosenboom
+* @author rainflop000
 * @version 1.0
 */
 public class Player
@@ -128,82 +128,3 @@ public class Player
         }
     }
 }
-
-/*
-The below code forms part of the Test Strategy for the Player class.
-It does not form part of actual Escape from Javalice program.
-Have retained this code to demonstrate the Testing Strategy for this class - to be
-read in conjunction with the uploaded "Test Strategy - Player Class" PDF.
-
-public static void main(String[] args)
-{
-    Player objPlayer = new Player();
-    objPlayer.test();
-}
-
-public void display()
-{
-    System.out.println("gameWon: " + gameWon);
-    System.out.println("gameEnd: " + gameEnd);
-    System.out.println("caughtByPolice: " + caughtByPolice);
-    System.out.println("jumps: " + jumps);
-    System.out.println("Player Name: " + playerName);
-}
-
-public void test()
-{
-    System.out.println("Create a Player object with the default constructor");
-    Player testPlayer1 = new Player();
-    testPlayer1.display();
-
-    System.out.println("Test all get methods");
-    Player testPlayer2 = new Player();
-    testPlayer2.getJumps();
-    System.out.println("getJumps: " + getJumps());
-    testPlayer2.isCaughtByPolice();
-    System.out.println("isCaughtByPolice: " + isCaughtByPolice());
-    testPlayer2.isGameEnd();
-    System.out.println("isGameEnd: " + isGameEnd());
-    testPlayer2.isGameWon();
-    System.out.println("isGameWon: " + isGameWon());
-    testPlayer2.getPlayerName();
-    System.out.println("getPlayerName: " + getPlayerName());
-
-    System.out.println("Test setCaughtByPolice");
-    Player testPlayer3 = new Player();
-    testPlayer3.setCaughtByPolice("Hello");
-    System.out.println("" + testPlayer3.caughtByPolice);
-    testPlayer3.setCaughtByPolice(true);
-    System.out.println("" + testPlayer3.caughtByPolice);
-
-    System.out.println("Test setGameEnd");
-    Player testPlayer3 = new Player();
-    testPlayer3.setGameEnd(123);
-    System.out.println("" + testPlayer3.gameEnd);
-    testPlayer3.setGameEnd(true);
-    System.out.println("" + testPlayer3.gameEnd);
-
-    System.out.println("Test setGameWon");
-    Player testPlayer3 = new Player();
-    testPlayer3.setGameWon('s');
-    System.out.println("" + testPlayer3.gameWon);
-    testPlayer3.setGameWon(true);
-    System.out.println("" + testPlayer3.gameWon);
-
-    System.out.println("Test setPlayerName");
-    Player testPlayer3 = new Player();
-    testPlayer3.setPlayerName(true);
-    System.out.println("" + testPlayer3.playerName);
-    testPlayer3.setPlayerName("William");
-    System.out.println("" + testPlayer3.playerName);
-
-    System.out.println("Test promptPlayerName");
-    Player testPlayer4 = new Player();
-    testPlayer4.promptPlayerName();
-
-    System.out.println("Test useJump");
-    Player testPlayer5 = new Player();
-    testPlayer5.useJump();
-    testPlayer5.useJump();
-    testPlayer5.useJump();
-*/

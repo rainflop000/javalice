@@ -4,7 +4,7 @@ import java.util.*;
 * Class represents the magic police in the game. Contains methods to update the chance
 * of encounter with the magic police, check if magic police are encountered, and
 * calculates the bribe amount.
-* @author William Rosenboom
+* @author rainflop000
 * @version 1.0
 */
 public class MagicPolice

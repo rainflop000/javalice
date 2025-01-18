@@ -3,7 +3,7 @@ import java.util.*;
 /**
 * Class represents a room/portal in the game. Contains methods generating available
 * portals, choose portal direction and handle user input.
-* @author William Rosenboom
+* @author rainflop000
 * @version 1.0
 */
 public class Room

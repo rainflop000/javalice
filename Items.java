@@ -3,7 +3,7 @@ import java.util.*;
 /**
 * Class represents the different items in the game. Contains methods on finding and
 * opening magic boxes, adding to inventory and using the items in the game.
-* @author William Rosenboom
+* @author rainflop000
 * @version 1.0
 */
 public class Items
