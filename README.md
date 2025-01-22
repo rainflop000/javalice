@@ -3,6 +3,7 @@ This is a text-based interface game called Javalice.
 This game was originally written as part of my Masters of Computer Science course, and subsequently refractored before making the repository public.
 
 ## Aim of the Game
+
 In Javalice, the player takes on the role of a wielder of forbidden magical powers. The new king of Javalice has outlawed magic and constructed a series of mazes to trap those who practice it. The player must escape these mazes by locating and unlocking a magical portal leading to another realm.
 
 The goal is to find the final exit portal and leave Javalice before being caught by the king's forces or ending up in jail.
@@ -39,17 +40,17 @@ Here's how the game works:
 4. **Magic Boxes**:
 - Each room has a 50% chance of containing a magic box with one of the following:
     - Coins: 10–35 coins (30% chance).
-    - Magic Police Alarm: Increases police encounter probabilities by 3% in all directions (25%).
-    - Invisibility Cloak: Escapes magical police encounters (15%).
-    - Coal: No effect (30%).
+    - Magic Police Alarm: Increases police encounter probabilities by 3% in all directions (25% chance).
+    - Invisibility Cloak: Escapes magical police encounters (15% chance).
+    - Coal: No effect (30% chance).
 - Players can open the box and decide whether to keep the item. Inventory limit: 3 items.
 
 5. **Encounters**:
 - Magical Police:
-    - Use an Invisibility Cloak or bribe them (cost: 0.5x–1.5x current coins).
+    - Use an Invisibility Cloak or bribe them (cost: random amount of 0.5x–1.5x current coins).
     - If neither option is possible, the player is caught.
 - Jail:
-    - Jump back up to three times to a new room. No reversed probabilities.
+    - Players can jump back up to three times to a new room. No reversed probabilities.
 
 ### Winning and Losing
 
@@ -59,6 +60,7 @@ Here's how the game works:
     - Exhaust all backward jumps after landing in jail.
 
 ### Endgame
-- The outcome is logged in Outcome.txt.
+
+- The outcome is printed on screen.
 
 Good luck escaping Javalice!
